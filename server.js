@@ -9,6 +9,14 @@ const logFile = fs.createWriteStream('./log.txt', {
     flags: 'r+',
 });
 
+const actionLogFile = fs.createWriteStream('./action.txt', {
+    flags: 'r+'
+});
+
+actionLogFile.on('error', (err) => {
+    console.log(`actionLogFile出现错误: ${JSON.stringify(err)}`)
+});
+
 let server = http.createServer(function (req, res) {
     let urlObject = url.parse(req.url);
 
@@ -16,6 +24,19 @@ let server = http.createServer(function (req, res) {
         let file = fs.readFileSync(path.resolve(process.cwd(), urlObject.path.substring(1)));
         return res.end(file);
     }
+
+    if (/^\/log$/.test(urlObject.pathname)) {
+        actionLogFile.write('\n', 'utf-8');
+        req.pipe(actionLogFile, {
+            end: false
+        });
+        return res.end('log ok');
+    }
+
+    if (/^\/loglist$/.test(urlObject.pathname)) {
+        return res.end(fs.readFileSync('./action.txt', 'utf-8'));
+    }
+
     let requestBody = '';
     const recordStream = new stream.Transform({
         transform (chunk, encoding, callback) {

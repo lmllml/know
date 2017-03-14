@@ -23,7 +23,7 @@ function findIndex (target) {
     if (!parent) {
         return 0;
     }
-    return Array.prototype.indexOf.call(parent.childNodes, target);
+    return Array.prototype.indexOf.call(parent.children, target);
 }
 
 function hash (target) {
@@ -33,7 +33,7 @@ function hash (target) {
 
     let hashStr = createOneDomHash(target);
     let parent = target.parentElement;
-    while (parent) {
+    while (parent.tagName !== 'HTML') {
         hashStr += '|' + createOneDomHash(parent);
 
         parent = parent.parentElement;
@@ -42,11 +42,12 @@ function hash (target) {
 }
 
 function uploadLogList () {
+    if (!logList || !logList.length) {
+        return;
+    }
     fetch('/log', {
         method: 'post',
-        body: {
-            data: logList.join(',')
-        }
+        body: logList.map(JSON.stringify).join('\n')
     }).then(() => {
         logList = [];
     });
