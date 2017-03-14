@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>加法计算器</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+        <style rel="text/stylesheet">
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                height: 100%;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <input id="firstValue" type="text">
+            +
+            <input id="secondValue" type="text">
+            =
+            <span id="total"  class="value"></span>
+            <button onclick="compute()">计算</button>
+            <div id="mousecount">
+            </div>
+            <div id="touchcount">
+            </div>
+
+            <div id="clickPosition"></div>
+            <div style="height: 300px">
+
+            </div>
+        </div>
+
+        <script>
+            window.compute = function () {
+                var firstValue = document.getElementById('firstValue');
+                var secondValue =  document.getElementById('secondValue');
+                var total = document.getElementById('total');
+                total.innerText = Number(firstValue.value) + Number(secondValue.value);
+            }
+        </script>
+        <script src="./log.js" type="text/javascript"></script>
+    </body>
+</html>

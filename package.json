@@ -1,0 +1,12 @@
+{
+  "name": "know",
+  "scripts": {
+    "server": "NODE_CONFIG_DIR=./config node index.js",
+    "dev": "NODE_ENV=dev npm run server"
+  },
+  "dependencies": {
+    "config": "^1.25.1",
+    "koa": "^2.1.0",
+    "koa-router": "^7.0.1"
+  }
+}
