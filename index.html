@@ -7,40 +7,76 @@
                 margin: 0;
                 padding: 0;
             }
+
             .container {
                 height: 100%;
                 overflow: auto;
+            }
+
+            .toast-button-wrapper {
+                text-align: center;
+                margin-bottom: 100px;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <input id="firstValue" type="text">
-            +
-            <input id="secondValue" type="text">
-            =
-            <span id="total"  class="value"></span>
-            <button onclick="compute()">计算</button>
-            <div id="mousecount">
+            <div>
+                <input id="firstValue" type="text">
+                +
+                <input id="secondValue" type="text">
+                =
+                <span id="total"  class="value"></span>
+                <button onclick="compute()">计算</button>
+                <button onclick="clearInput()">清空</button>
             </div>
-            <div id="touchcount">
+            <div>
+                秒表: <span id="clockTime"></span>
+            </div>
+            <div>
+                <h1>文章</h1>
+                <p id="content">
+
+                </p>
+
+            </div>
+            <div class="toast-button-wrapper">
+                <button onclick="toastMessage()" class="toast-button">点一点</button>
             </div>
 
-            <div id="clickPosition"></div>
-            <div style="height: 300px">
-
-            </div>
         </div>
 
         <script>
+            var text = '';
+            for (var i = 0; i < 10000; i++) {
+                text += '好文章'
+            }
+            document.querySelector('#content').innerText = text;
             window.compute = function () {
                 var firstValue = document.getElementById('firstValue');
                 var secondValue =  document.getElementById('secondValue');
                 var total = document.getElementById('total');
                 total.innerText = Number(firstValue.value) + Number(secondValue.value);
             }
+
+            window.toastMessage = function () {
+                alert('点了点');
+            }
+            window.clearInput = function () {
+                firstValue.value = '';
+                secondValue.value = '';
+            }
+
+            var clockTime = 0;
+            setInterval(() => {
+                var clockTimeDOM = document.querySelector('#clockTime');
+                ++clockTime
+                clockTimeDOM.innerText = clockTime;
+                clockTimeDOM.dataset.clockTime = clockTime;
+            }, 1000);
         </script>
+        <script src="./train.js" type="text/javascript"></script>
         <!--<script src="./log.js" type="text/javascript"></script>-->
-        <script src="./playback.js" type="text/javascript"></script>
+        <!--<script src="./playback.js" type="text/javascript"></script>-->
     </body>
 </html>

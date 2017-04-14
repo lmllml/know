@@ -21,7 +21,7 @@ let server = http.createServer(function (req, res) {
     let urlObject = url.parse(req.url);
 
     if (/\.html|\.js$/.test(urlObject.path)) {
-        let file = fs.readFileSync(path.resolve(process.cwd(), urlObject.path.substring(1)));
+        let file = fs.readFileSync(path.resolve(process.cwd(), urlObject.pathname.substring(1)));
         return res.end(file);
     }
 

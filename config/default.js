@@ -1,5 +1,5 @@
 module.exports =  {
-    port: 3003,
+    port: 9999,
     proxyRule: {
 
     }

@@ -1,22 +1,16 @@
 
-{"target":"INPUT-0|DIV-0|BODY-1","type":"click","timestamp":1489507064370}
-{"target":"INPUT-0|DIV-0|BODY-1","type":"change","timestamp":1489507065805,"extra":{"value":"a"}}
-{"target":"INPUT-1|DIV-0|BODY-1","type":"click","timestamp":1489507065917}
-{"target":"INPUT-1|DIV-0|BODY-1","type":"change","timestamp":1489507066682,"extra":{"value":"b"}}
-{"target":"BUTTON-3|DIV-0|BODY-1","type":"click","timestamp":1489507066804}
-{"target":"INPUT-0|DIV-0|BODY-1","type":"click","timestamp":1489507067641}
-{"target":"INPUT-0|DIV-0|BODY-1","type":"change","timestamp":1489507068732,"extra":{"value":"1"}}
-{"target":"INPUT-1|DIV-0|BODY-1","type":"click","timestamp":1489507068861}
-{"target":"INPUT-1|DIV-0|BODY-1","type":"change","timestamp":1489507069907,"extra":{"value":"2"}}
-{"target":"BUTTON-3|DIV-0|BODY-1","type":"click","timestamp":1489507070003}
-{"target":"INPUT-0|DIV-0|BODY-1","type":"click","timestamp":1489507070739}
-{"target":"INPUT-0|DIV-0|BODY-1","type":"change","timestamp":1489507071857,"extra":{"value":"4"}}
-{"target":"INPUT-1|DIV-0|BODY-1","type":"click","timestamp":1489507071975}
-{"target":"INPUT-1|DIV-0|BODY-1","type":"change","timestamp":1489507073468,"extra":{"value":"5"}}
-{"target":"BUTTON-3|DIV-0|BODY-1","type":"click","timestamp":1489507073564}
-{"target":"DIV-0|BODY-1","type":"click","timestamp":1489507074379}
-{"target":"INPUT-0|DIV-0|BODY-1","type":"click","timestamp":1489507074730}
-{"target":"INPUT-0|DIV-0|BODY-1","type":"change","timestamp":1489507076158,"extra":{"value":"23"}}
-{"target":"INPUT-1|DIV-0|BODY-1","type":"click","timestamp":1489507076262}
-{"target":"INPUT-1|DIV-0|BODY-1","type":"change","timestamp":1489507077675,"extra":{"value":"43"}}
-{"target":"BUTTON-3|DIV-0|BODY-1","type":"click","timestamp":1489507077795}
+{"target":"DIV-0|BODY-1","type":"click","timestamp":1489559321141}
+{"target":"INPUT-0|DIV-0|BODY-1","type":"click","timestamp":1489559321772}
+{"target":"INPUT-0|DIV-0|BODY-1","type":"change","timestamp":1489559323554,"extra":{"value":"8"}}
+{"target":"INPUT-1|DIV-0|BODY-1","type":"click","timestamp":1489559323674}
+{"target":"INPUT-1|DIV-0|BODY-1","type":"change","timestamp":1489559325144,"extra":{"value":"9"}}
+{"target":"BUTTON-3|DIV-0|BODY-1","type":"click","timestamp":1489559325256}
+{"target":"INPUT-0|DIV-0|BODY-1","type":"change","timestamp":1489559329666,"extra":{"value":"A"}}
+{"target":"BUTTON-3|DIV-0|BODY-1","type":"click","timestamp":1489559329754}
+{"target":"BUTTON-4|DIV-0|BODY-1","type":"click","timestamp":1489559333792}
+{"target":"INPUT-0|DIV-0|BODY-1","type":"click","timestamp":1489559334965}
+{"target":"INPUT-0|DIV-0|BODY-1","type":"change","timestamp":1489559336528,"extra":{"value":"5"}}
+{"target":"INPUT-1|DIV-0|BODY-1","type":"click","timestamp":1489559336631}
+{"target":"INPUT-1|DIV-0|BODY-1","type":"change","timestamp":1489559338489,"extra":{"value":"6"}}
+{"target":"BUTTON-3|DIV-0|BODY-1","type":"click","timestamp":1489559338542}
+{"target":"BUTTON-0|DIV-6|DIV-0|BODY-1", "type": "click", "timestamp": 1489559343381}
